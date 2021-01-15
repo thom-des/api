@@ -10,9 +10,9 @@ Most of our API uses the [GraphQL](https://graphql.org/) query language. It is d
 
 ## Authentication
 
-A REST endpoint is available for authentication: `POST /users/sign_in.json`.
+Logging in can be done through the `signIn` mutation.
 
-It expects the following payload: `{ "user": { "email": "myemail@mydomain.com", "password": "myhashedpassword" } }`
+It expects the following payload: `{ "email": "myemail@mydomain.com", "password": "myhashedpassword" }`
 
 The password needs to be hash client side using a salt. The salt needs to be retrieved with `GET /api/v1/users/myemail@mydomain.com`.
 
